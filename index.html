@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fraksma Sport - Calzado</title>
+
+    <style>
+        /* Reset y estilos generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Lato', sans-serif;
+            line-height: 1.6;
+            color: #4A5568;
+            background-color: #F7FAFC;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Banner de oferta */
+        .offer-banner {
+            background-color: #161414;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            font-weight: bold;
+            position: relative;
+        }
+        
+        #banner-span {
+            color: goldenrod;
+        }
+
+        /* Header */
+        header {
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        #header-img {
+            width: 100px;
+            height: 100px;
+            margin-right: 10px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            text-decoration: none;
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        .nav-links li {
+            margin-left: 30px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        .nav-links a:hover {
+            color: #007bff;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://cdn.shopify.com/s/files/1/0830/8149/4816/files/Banner_Fraksma.png?v=1695642065');
+            background-size: cover;
+            background-position: center;
+            color: #F4F6F9;
+            padding: 150px 0;
+            height: 800px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .hero h1 {
+            font-size: 56px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .hero p {
+            font-size: 24px;
+            color: #f8f9fa;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #0056D2;
+            color: #fff;
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #003D99;
+            transform: translateY(-3px);
+        }
+
+        /* Productos */
+        .products {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+        .products h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #161414;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        .product-item {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .product-item:hover {
+            transform: translateY(-5px);
+        }
+        .product-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .product-info {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .product-info h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #1A202C;
+        }
+        .product-info p {
+            color: #666;
+            margin-bottom: 15px;
+            flex-grow: 1;
+        }
+        .product-price {
+            font-weight: bold;
+            color: #161414;
+            font-size: 20px;
+        }
+        .add-to-cart {
+            background-color: #D72638;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            border-top: 1px solid #ddd;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+        .add-to-cart:hover {
+            background-color: #B01C2C;
+        }
+
+        /* Características */
+        .features {
+            padding: 80px 0;
+        }
+        .features h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #161414;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        .feature-item {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .feature-item:hover {
+            transform: translateY(-5px);
+        }
+        .feature-icon {
+            font-size: 48px;
+            color: #161414;
+            margin-bottom: 20px;
+        }
+        .feature-item h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .feature-item p {
+            color: #666;
+        }
+
+        /* Información detallada del producto */
+        .product-details {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+        .product-details h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #161414;
+        }
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            align-items: center;
+        }
+        .details-image {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .details-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .details-content h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #161414;
+        }
+        .details-content p {
+            margin-bottom: 15px;
+            font-size: 16px;
+            color: #666;
+        }
+        .details-content ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .details-content ul li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+        .details-content ul li:before {
+            content: '✓';
+            color: #161414;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Video Section - Centrada y Mejorada Estéticamente */
+        .video-section {
+            padding: 40px 0;
+            background-color: #F8FAFC; /* Fondo claro */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .video-section h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #161414; /* Azul marino */
+        }
+        .video-container {
+            width: 100%;
+            position: relative;
+            height: auto;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Añadir sombra */
+        }
+
+        .video-container video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Ubicación */
+        .location {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+        .location h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #161414;
+        }
+        .map-container {
+            height: 400px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        /* Redirect Section */
+        .redirect-section {
+            padding: 80px 0;
+            background-color: #fff;
+            text-align: center;
+        }
+        .redirect-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #161414;
+        }
+        .redirect-section p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #666;
+        }
+        .redirect-section .cta-button {
+            background-color: #161414;
+            color: #fff;
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .redirect-section .cta-button:hover {
+            background-color: #312a2a;
+            transform: translateY(-3px);
+        }
+
+        #redirect-img {
+            width: 100%;
+            height: auto;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 40px 0;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .footer-section {
+            flex: 1;
+            margin-bottom: 20px;
+            min-width: 200px;
+        }
+        .footer-section h3 {
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+        .footer-section ul {
+            list-style: none;
+        }
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+        .footer-section ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .footer-section ul li a:hover {
+            color: #007bff;
+        }
+        .footer-bottom {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #555;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .hero h1 {
+                font-size: 36px;
+            }
+            .hero p {
+                font-size: 18px;
+            }
+            .product-grid,
+            .feature-grid,
+            .details-grid {
+                grid-template-columns: 1fr;
+            }
+            .details-image {
+                order: -1;
+            }
+        }
+    </style>
+    
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Banner de oferta con temporizador -->
+    <div class="offer-banner">
+        ¡Oferta especial! <span id="banner-span"> 20% de descuento </span> en todos los zapatos. ¡Por tiempo limitado!
+    </div>
+
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <a href="#" class="logo">
+                <img src="https://cdn.shopify.com/s/files/1/0830/8149/4816/files/LOGO_FRAKSMA_4.png?v=1714763327" alt="Fraksma Sport Logo" id="header-img">
+            </a>
+            <ul class="nav-links">
+                <li><a href="#products">Productos</a></li>
+                <li><a href="#features">Características</a></li>
+                <li><a href="#details">Detalles</a></li>
+                <li><a href="#video">Video</a></li>
+                <li><a href="#location">Ubicación</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>Elegancia y Confort en Cada Paso</h1>
+                <p>Descubre nuestra exclusiva colección de zapatos diseñados para el éxito, la comodidad y el estilo. Calidad premium que marca la diferencia.</p>
+                <a href="#products" class="cta-button">Explora la Colección</a>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="products">
+            <div class="container">
+                <h2>Nuestra Colección Exclusiva</h2>
+                <div class="product-grid">
+                    <!-- Los productos se insertarán aquí dinámicamente con JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features">
+            <div class="container">
+                <h2>Por Qué Elegirnos</h2>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fas fa-shoe-prints"></i></div>
+                        <h3>Calidad Premium</h3>
+                        <p>Materiales de primera y artesanía excepcional en cada par de zapatos.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                        <h3>Garantía de Confort</h3>
+                        <p>Diseñados para brindar comodidad durante todo el día, sin importar la ocasión.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fas fa-leaf"></i></div>
+                        <h3>Sostenibilidad</h3>
+                        <p>Comprometidos con prácticas de producción responsables y materiales eco-amigables.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fas fa-paint-brush"></i></div>
+                        <h3>Diseño Innovador</h3>
+                        <p>Estilos únicos que combinan las últimas tendencias con la elegancia clásica.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Details Section -->
+        <section id="details" class="product-details">
+            <div class="container">
+                <h2>Información Detallada del Producto</h2>
+                <div class="details-grid">
+                    <div class="details-image">
+                        <img src="./zapatos/zapato17.jpg" alt="Zapato Clásico Oxford">
+                    </div>
+                    <div class="details-content">
+                        <h3>Zapato Clásico Oxford</h3>
+                        <p>Nuestro Zapato Clásico Oxford es la culminación de la artesanía tradicional y el diseño moderno. Perfecto para ocasiones formales o para elevar tu estilo diario.</p>
+                        <ul>
+                            <li>Cuero italiano de grano completo</li>
+                            <li>Suela de cuero con tecnología de amortiguación</li>
+                            <li>Forro de piel genuina para mayor confort</li>
+                            <li>Disponible en negro, marrón y burdeos</li>
+                            <li>Tallas desde 38 hasta 46</li>
+                        </ul>
+                        <p>Cada par es cuidadosamente elaborado por nuestros artesanos expertos, garantizando un ajuste perfecto y una durabilidad excepcional.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Section -->
+        <section id="video" class="video-section">
+            <div class="container">
+                <h2>Descubre Nuestra Pasión por la Calidad</h2>
+                <div class="video-container">
+                    <video controls>
+                        <source src="https://cdn.shopify.com/videos/c/o/v/24431a96b3fc428fad50cbd9674498aa.mp4" type="video/mp4">
+                        Tu navegador no soporta el formato de video.
+                    </video>                </div>
+            </div>
+        </section>
+
+        <!-- Location Section -->
+        <section id="location" class="location">
+            <div class="container">
+                <h2>Visítanos</h2>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7951.484466021066!2d-75.691481!3d4.814263!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3887723c3f2197%3A0x6ed5b966a8301b7a!2sFraksma%20Sport%20la%2018!5e0!3m2!1ses!2sco!4v1729016382417!5m2!1ses!2sco" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Redirect Section -->
+        <section id="redirect" class="redirect-section">
+            <div class="container">
+                <h2>Visita Nuestra Página Web</h2>
+                <p>Para más información y para explorar nuestra colección completa, visita nuestra página web oficial.</p>
+                <img src="./zapatos/image.png" alt="" id="redirect-img">
+                <a href="https://fraksmasport.co/" class="cta-button">Ir a la Página Web</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Fraksma Sport</h3>
+                    <p>Elegancia y confort en cada paso.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="#products">Productos</a></li>
+                        <li><a href="#features">Características</a></li>
+                        <li><a href="#details">Detalles</a></li>
+                        <li><a href="#video">Video</a></li>
+                        <li><a href="#location">Ubicación</a></li>
+                        <li><a href="#contact">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p>Email: info@fraksmasport.co</p>
+                    <p>Teléfono: (123) 456-7890</p>
+                    <p>Dirección: Centro, Cl. 18 #6-51 local #3, Pereira, Risaralda</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Fraksma Sport. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Temporizador de cuenta regresiva
+        function countdownTimer(endDate) {
+            const countdown = document.getElementById('countdown');
+            const end = new Date(endDate).getTime();
+
+            const timer = setInterval(() => {
+                const now = new Date().getTime();
+                const distance = end - now;
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                countdown.innerHTML = `Oferta termina en: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+                if (distance < 0) {
+                    clearInterval(timer);
+                    countdown.innerHTML = "¡La oferta ha terminado!";
+                }
+            }, 1000);
+        }
+
+        // Iniciar el temporizador (establece la fecha de finalización aquí)
+        countdownTimer("December 31, 2024 23:59:59");
+
+        // Datos de ejemplo para los productos
+        const products = [
+            { name: "Zapato Clásico Negro", description: "Elegancia atemporal para cualquier ocasión.", 
+              price: "$599.000 COP", image: "./zapatos/zapato1.jpg" },
+            { name: "Mocasín Casual Marrón", description: "Comodidad y estilo para el día a día.",
+              price: "$599.000 COP", image: "./zapatos/zapato2.jpg" },
+            { name: "Oxford Formal Azul", description: "Sofisticación para eventos especiales.",
+              price: "$599.000 COP", image: "./zapatos/zapato3.jpg" },
+            { name: "Zapatilla Deportiva Gris", description: "Rendimiento y moda para tu estilo de vida activo.",
+              price: "$599.000 COP", image: "./zapatos/zapato4.jpg" },
+            { name: "Zapato Clásico Negro", description: "Elegancia atemporal para cualquier ocasión.", 
+              price: "$599.000 COP", image: "./zapatos/zapato5.jpg" },
+            { name: "Mocasín Casual Marrón", description: "Comodidad y estilo para el día a día.",
+              price: "$599.000 COP", image: "./zapatos/zapato6.jpg" },
+            { name: "Oxford Formal Azul", description: "Sofisticación para eventos especiales.",
+              price: "$599.000 COP", image: "./zapatos/zapato7.jpg" },
+            { name: "Zapatilla Deportiva Gris", description: "Rendimiento y moda para tu estilo de vida activo.",
+              price: "$599.000 COP", image: "./zapatos/zapato8.jpg" },
+            { name: "Zapato Clásico Negro", description: "Elegancia atemporal para cualquier ocasión.", 
+              price: "$599.000 COP", image: "./zapatos/zapato9.jpg" },
+            { name: "Mocasín Casual Marrón", description: "Comodidad y estilo para el día a día.",
+              price: "$599.000 COP", image: "./zapatos/zapato10.jpg" },
+            { name: "Oxford Formal Azul", description: "Sofisticación para eventos especiales.",
+              price: "$599.000 COP", image: "./zapatos/zapato11.jpg" },
+            { name: "Zapatilla Deportiva Gris", description: "Rendimiento y moda para tu estilo de vida activo.",
+              price: "$599.000 COP", image: "./zapatos/zapato12.jpg" },
+            { name: "Mocasín Casual Marrón", description: "Comodidad y estilo para el día a día.",
+              price: "$599.000 COP", image: "./zapatos/zapato13.jpg" },
+            { name: "Oxford Formal Azul", description: "Sofisticación para eventos especiales.",
+              price: "$599.000 COP", image: "./zapatos/zapato14.jpg" },
+            { name: "Zapatilla Deportiva Gris", description: "Rendimiento y moda para tu estilo de vida activo.",
+              price: "$599.000 COP", image: "./zapatos/zapato15.jpg" },
+            { name: "Zapato Clásico Negro", description: "Elegancia atemporal para cualquier ocasión.", 
+              price: "$599.000 COP", image: "./zapatos/zapato16.jpg" },
+        ];
+
+        // Función para cargar los productos en la cuadrícula
+        function loadProducts() {
+            const productGrid = document.querySelector('.product-grid');
+            products.forEach(product => {
+                const productElement = document.createElement('div');
+                productElement.className = 'product-item';
+                productElement.innerHTML = `
+                    <img src="${product.image}" alt="${product.name}">
+                    <div class="product-info">
+                        <h3>${product.name}</h3>
+                        <p>${product.description}</p>
+                        <span class="product-price">${product.price}</span>
+                    </div>
+                    <a href="https://fraksmasport.co/" class="add-to-cart">Añadir al Carrito</a>
+                `;
+                productGrid.appendChild(productElement);
+            });
+        }
+
+        // Cargar productos cuando el DOM esté listo
+        document.addEventListener('DOMContentLoaded', loadProducts);
+
+        // Manejar el envío del formulario de contacto
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Gracias por tu mensaje. Nos pondremos en contacto contigo pronto.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
