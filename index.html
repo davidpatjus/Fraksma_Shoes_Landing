@@ -4,6 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fraksma Sport - Calzado</title>
+    <meta name="description" content="Descubre la exclusiva colección de zapatos de Fraksma Sport. Elegancia, confort y calidad premium en cada paso.">
+    <meta name="keywords" content="zapatos, calzado, elegancia, confort, calidad, Fraksma Sport, colección exclusiva, yeferson cossio, pereira, ropa, mayoristas">
+    <meta name="author" content="Fraksma Sport">
+    <meta property="og:title" content="Fraksma Sport - Calzado">
+    <meta property="og:description" content="Descubre la exclusiva colección de zapatos de Fraksma Sport. Elegancia, confort y calidad premium en cada paso.">
+    <meta property="og:image" content="https://cdn.shopify.com/s/files/1/0830/8149/4816/files/LOGO_FRAKSMA_4.png?v=1714763327">
+    <meta property="og:url" content="https://fraksmasport.co/landing-zapatos">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Fraksma Sport - Calzado">
+    <meta name="twitter:description" content="Descubre la exclusiva colección de zapatos de Fraksma Sport. Elegancia, confort y calidad premium en cada paso.">
+    <meta name="twitter:image" content="https://cdn.shopify.com/s/files/1/0830/8149/4816/files/LOGO_FRAKSMA_4.png?v=1714763327">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Fraksma Sport">
+    <meta property="og:locale" content="es_CO">
+    <link rel="icon" href="https://cdn.shopify.com/s/files/1/0830/8149/4816/files/LOGO_FRAKSMA_4.png?v=1714763327" type="image/png">    
+    
 
     <style>
         /* Reset y estilos generales */
@@ -456,6 +472,12 @@
             padding-top: 20px;
             border-top: 1px solid #555;
         }
+        #pats {
+            color: #007bff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
 
         /* Responsive */
         @media (max-width: 768px) {
@@ -498,7 +520,7 @@
                 <li><a href="#products">Productos</a></li>
                 <li><a href="#features">Características</a></li>
                 <li><a href="#details">Detalles</a></li>
-                <li><a href="#video">Video</a></li>
+                <li><a href="#video">Influencers</a></li>
                 <li><a href="#location">Ubicación</a></li>
                 <li><a href="#contact">Contacto</a></li>
             </ul>
@@ -559,20 +581,20 @@
         <!-- Product Details Section -->
         <section id="details" class="product-details">
             <div class="container">
-                <h2>Información Detallada del Producto</h2>
+                <h2>Vístete bonito para una cita con el éxito</h2>
                 <div class="details-grid">
                     <div class="details-image">
-                        <img src="./zapatos/zapato17.jpg" alt="Zapato Clásico Oxford">
+                        <img src="./zapatos/zapato17.jpg" alt="Zapato">
                         <a href="https://fraksmasport.co/collections/calzado/products/zapato-cn-hb-letras-pequenas-cn09?variant=49225687204128" class="add-to-cart">Añadir al Carrito</a>
                     </div>
                     <div class="details-content">
-                        <h3>Zapato Clásico Oxford</h3>
-                        <p>Nuestro Zapato Clásico Oxford es la culminación de la artesanía tradicional y el diseño moderno. Perfecto para ocasiones formales o para elevar tu estilo diario.</p>
+                        <h3>TENIS ZAPATILLAS HUG0 B0SS LOGO </h3>
+                        <p>Nuestro Tennis hug0 b0ss es la culminación de la artesanía tradicional y el diseño moderno. Perfecto para ocasiones formales o para elevar tu estilo diario.</p>
                         <ul>
                             <li>Cuero italiano de grano completo</li>
                             <li>Suela de cuero con tecnología de amortiguación</li>
                             <li>Forro de piel genuina para mayor confort</li>
-                            <li>Disponible en negro, marrón y burdeos</li>
+                            <li>Disponible en negro y blanco</li>
                             <li>Tallas desde 38 hasta 46</li>
                         </ul>
                         <p>Cada par es cuidadosamente elaborado por nuestros artesanos expertos, garantizando un ajuste perfecto y una durabilidad excepcional.</p>
@@ -584,7 +606,7 @@
         <!-- Video Section -->
         <section id="video" class="video-section">
             <div class="container">
-                <h2>Descubre Nuestra Pasión por la Calidad</h2>
+                <h2>Certificados por los mejores - Yeferson Cossio</h2>
                 <div class="video-container">
                     <video controls>
                         <source src="https://cdn.shopify.com/videos/c/o/v/24431a96b3fc428fad50cbd9674498aa.mp4" type="video/mp4">
@@ -636,79 +658,149 @@
                 </div>
                 <div class="footer-section">
                     <h3>Contacto</h3>
-                    <p>Email: info@fraksmasport.co</p>
-                    <p>Teléfono: (123) 456-7890</p>
+                    <p>Email: Fraksmapererira9@gmail.com</p>
+                    <p>Teléfono: +57 (322) 688 3811</p>
                     <p>Dirección: Centro, Cl. 18 #6-51 local #3, Pereira, Risaralda</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Fraksma Sport. Todos los derechos reservados.</p>
+                <p>&copy; 2024 Fraksma Sport. Todos los derechos reservados.  -  Desarrollado por <a href="https://pats-software-solutions.vercel.app/" id="pats">Pat's Software Solutions</a></p>
             </div>
         </div>
     </footer>
 
     <!-- JavaScript -->
     <script>
-        // Temporizador de cuenta regresiva
-        function countdownTimer(endDate) {
-            const countdown = document.getElementById('countdown');
-            const end = new Date(endDate).getTime();
-
-            const timer = setInterval(() => {
-                const now = new Date().getTime();
-                const distance = end - now;
-
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                countdown.innerHTML = `Oferta termina en: ${days}d ${hours}h ${minutes}m ${seconds}s`;
-
-                if (distance < 0) {
-                    clearInterval(timer);
-                    countdown.innerHTML = "¡La oferta ha terminado!";
-                }
-            }, 1000);
-        }
-
-        // Iniciar el temporizador (establece la fecha de finalización aquí)
-        countdownTimer("December 31, 2024 23:59:59");
-
-        // Datos de ejemplo para los productos
+        // Datos para los productos
         const products = [
-            { name: "ZAPATO CN HB RELIEVE", description: "Elegancia atemporal para cualquier ocasión.", 
-              price: "$599.000 COP", image: "./zapatos/zapato1.jpg", link: "https://fraksmasport.co/collections/calzado/products/zapato-cn-hb-relieve-cn13?variant=49225689170208" },
-            { name: "ZAPATO CN HB RELIEVE", description: "Comodidad y estilo para el día a día.",
-              price: "$599.000 COP", image: "./zapatos/zapato2.jpg", link: "https://fraksmasport.co/collections/calzado/products/zapato-cn-hb-relieve-cn13?variant=49225689497888" },
-            { name: "ZAPATO CN DIO", description: "Sofisticación para eventos especiales.",
-              price: "$599.000 COP", image: "./zapatos/zapato3.jpg", link: "https://fraksmasport.co/collections/calzado/products/zapato-cn-dio-cn02?variant=49225675309344" },
-            { name: "ZAPATO CN HB CLASICO", description: "Rendimiento y moda para tu estilo de vida activo.",
-              price: "$599.000 COP", image: "./zapatos/zapato4.jpg", link: "https://fraksmasport.co/collections/calzado/products/zapato-cn-hb-clasico-cn11?variant=49225678127392" },
-            { name: "ZAPATO CN BURBER", description: "Elegancia atemporal para cualquier ocasión.", 
-              price: "$599.000 COP", image: "./zapatos/zapato5.jpg", link: "https://fraksmasport.co/collections/calzado/products/zapato-cn-burber-cn07?variant=49225674260768" },
-            { name: "ZAPATO CN HB TUBULAR", description: "Comodidad y estilo para el día a día.",
-              price: "$599.000 COP", image: "./zapatos/zapato6.jpg", link: "https://fraksmasport.co/collections/calzado/products/zapato-cn-hb-tubular-clasico-cn14?variant=49225690120480" },
-            { name: "ZAPATO CN HB LETRAS B RELIEVE", description: "Sofisticación para eventos especiales.",
-              price: "$599.000 COP", image: "./zapatos/zapato7.jpg", link: "https://fraksmasport.co/collections/calzado/products/zapato-cn-hb-letras-b-relieve-cn12?variant=49225679536416" },
-            { name: "ZAPATO CN HB ESCAMAS", description: "Rendimiento y moda para tu estilo de vida activo.",
-              price: "$599.000 COP", image: "./zapatos/zapato8.jpg", link: "https://fraksmasport.co/collections/calzado/products/zapato-cn-hb-escamas-cn10?variant=49225678651680" },
-            { name: "ZAPATO CN ALEXANDER MC", description: "Elegancia atemporal para cualquier ocasión.", 
-              price: "$599.000 COP", image: "./zapatos/zapato9.jpg", link: "https://fraksmasport.co/collections/calzado/products/zapato-cn-alexander-mc-cn04?variant=49225671835936" },
-            { name: "ZAPATO CN ALEXANDER MC", description: "Comodidad y estilo para el día a día.",
-              price: "$599.000 COP", image: "./zapatos/zapato10.jpg", link: "https://fraksmasport.co/collections/calzado/products/zapato-cn-alexander-mc-cn05?variant=49225672622368" },
-            { name: "ZAPATO CN HB TUBULAR LETRAS", description: "Sofisticación para eventos especiales.",
-              price: "$599.000 COP", image: "./zapatos/zapato11.jpg", link: "https://fraksmasport.co/collections/calzado/products/zapato-cn-hb-tubular-letras-cn15?variant=49225686712608" },
-            { name: "ZAPATO CN ALEXANDER MC", description: "Rendimiento y moda para tu estilo de vida activo.",
-              price: "$599.000 COP", image: "./zapatos/zapato12.jpg", link: "https://fraksmasport.co/collections/calzado/products/zapato-cn-alexander-mc-cn06?variant=49225671147808" },
-            { name: "ZAPATO CN DIO", description: "Comodidad y estilo para el día a día.",
-              price: "$599.000 COP", image: "./zapatos/zapato13.jpg", link: "https://fraksmasport.co/collections/calzado/products/zapato-cn-dio-cn03?variant=49225676161312" },
-            { name: "ZAPATO CN ALEXANDER MC", description: "Sofisticación para eventos especiales.",
-              price: "$599.000 COP", image: "./zapatos/zapato14.jpg", link: "https://fraksmasport.co/collections/calzado/products/zapato-cn-alexander-mc-cn06?variant=49225671311648" },
-            { name: "ZAPATO CN DIO", description: "Rendimiento y moda para tu estilo de vida activo.",
-              price: "$599.000 COP", image: "./zapatos/zapato15.jpg", link: "https://fraksmasport.co/collections/calzado/products/zapato-cn-dio-cn01?variant=49225677308192" },
-            { name: "ZAPATO CN BURBER", description: "Elegancia atemporal para cualquier ocasión.", 
-              price: "$599.000 COP", image: "./zapatos/zapato16.jpg", link: "https://fraksmasport.co/collections/calzado/products/zapato-cn-burber-cn07?variant=49225674424608" },
+            {
+                name: "ZAPATO CN HB RELIEVE", 
+                description: "Elegancia atemporal para cualquier ocasión.",
+                price: "$580.000 COP",
+                oldprice: "$699.000 COP", 
+                image: "./zapatos/zapato1.jpg", 
+                link: "https://fraksmasport.co/collections/calzado/products/zapato-cn-hb-relieve-cn13?variant=49225689170208"
+            },
+            {
+                name: "ZAPATO CN HB RELIEVE", 
+                description: "Comodidad y estilo para el día a día.",
+                price: "$580.000 COP",
+                oldprice: "$699.000 COP",  
+                image: "./zapatos/zapato2.jpg", 
+                link: "https://fraksmasport.co/collections/calzado/products/zapato-cn-hb-relieve-cn13?variant=49225689497888"
+            },
+            {
+                name: "ZAPATO CN DIO", 
+                description: "Sofisticación para eventos especiales.",
+                price: "$580.000 COP",
+                oldprice: "$699.000 COP",  
+                image: "./zapatos/zapato3.jpg", 
+                link: "https://fraksmasport.co/collections/calzado/products/zapato-cn-dio-cn02?variant=49225675309344"
+            },
+            {
+                name: "ZAPATO CN HB CLASICO", 
+                description: "Rendimiento y moda para tu estilo de vida activo.",
+                price: "$580.000 COP",
+                oldprice: "$699.000 COP", 
+                image: "./zapatos/zapato4.jpg", 
+                link: "https://fraksmasport.co/collections/calzado/products/zapato-cn-hb-clasico-cn11?variant=49225678127392"
+            },
+            {
+                name: "ZAPATO CN BURBER", 
+                description: "Elegancia atemporal para cualquier ocasión.",
+                price: "$580.000 COP",
+                oldprice: "$699.000 COP", 
+                image: "./zapatos/zapato5.jpg", 
+                link: "https://fraksmasport.co/collections/calzado/products/zapato-cn-burber-cn07?variant=49225674260768"
+            },
+            {
+                name: "ZAPATO CN HB TUBULAR", 
+                description: "Comodidad y estilo para el día a día.",
+                price: "$580.000 COP",
+                oldprice: "$699.000 COP", 
+                image: "./zapatos/zapato6.jpg", 
+                link: "https://fraksmasport.co/collections/calzado/products/zapato-cn-hb-tubular-clasico-cn14?variant=49225690120480"
+            },
+            {
+                name: "ZAPATO CN HB LETRAS B RELIEVE", 
+                description: "Sofisticación para eventos especiales.",
+                price: "$580.000 COP",
+                oldprice: "$699.000 COP", 
+                image: "./zapatos/zapato7.jpg", 
+                link: "https://fraksmasport.co/collections/calzado/products/zapato-cn-hb-letras-b-relieve-cn12?variant=49225679536416"
+            },
+            {
+                name: "ZAPATO CN HB ESCAMAS", 
+                description: "Rendimiento y moda para tu estilo de vida activo.",
+                price: "$580.000 COP",
+                oldprice: "$699.000 COP", 
+                image: "./zapatos/zapato8.jpg", 
+                link: "https://fraksmasport.co/collections/calzado/products/zapato-cn-hb-escamas-cn10?variant=49225678651680"
+            },
+            {
+                name: "ZAPATO CN ALEXANDER MC", 
+                description: "Elegancia atemporal para cualquier ocasión.",
+                price: "$580.000 COP",
+                oldprice: "$699.000 COP", 
+                image: "./zapatos/zapato9.jpg", 
+                link: "https://fraksmasport.co/collections/calzado/products/zapato-cn-alexander-mc-cn04?variant=49225671835936"
+            },
+            {
+                name: "ZAPATO CN ALEXANDER MC", 
+                description: "Comodidad y estilo para el día a día.",
+                price: "$580.000 COP",
+                oldprice: "$699.000 COP", 
+                image: "./zapatos/zapato10.jpg", 
+                link: "https://fraksmasport.co/collections/calzado/products/zapato-cn-alexander-mc-cn05?variant=49225672622368"
+            },
+            {
+                name: "ZAPATO CN HB TUBULAR LETRAS", 
+                description: "Sofisticación para eventos especiales.",
+                price: "$580.000 COP",
+                oldprice: "$699.000 COP", 
+                image: "./zapatos/zapato11.jpg", 
+                link: "https://fraksmasport.co/collections/calzado/products/zapato-cn-hb-tubular-letras-cn15?variant=49225686712608"
+            },
+            {
+                name: "ZAPATO CN ALEXANDER MC", 
+                description: "Rendimiento y moda para tu estilo de vida activo.",
+                price: "$580.000 COP",
+                oldprice: "$699.000 COP", 
+                image: "./zapatos/zapato12.jpg", 
+                link: "https://fraksmasport.co/collections/calzado/products/zapato-cn-alexander-mc-cn06?variant=49225671147808"
+            },
+            {
+                name: "ZAPATO CN DIO", 
+                description: "Comodidad y estilo para el día a día.",
+                price: "$580.000 COP",
+                oldprice: "$699.000 COP", 
+                image: "./zapatos/zapato13.jpg", 
+                link: "https://fraksmasport.co/collections/calzado/products/zapato-cn-dio-cn03?variant=49225676161312"
+            },
+            {
+                name: "ZAPATO CN ALEXANDER MC", 
+                description: "Sofisticación para eventos especiales.",
+                price: "$580.000 COP",
+                oldprice: "$699.000 COP", 
+                image: "./zapatos/zapato14.jpg", 
+                link: "https://fraksmasport.co/collections/calzado/products/zapato-cn-alexander-mc-cn06?variant=49225671311648"
+            },
+            {
+                name: "ZAPATO CN DIO", 
+                description: "Rendimiento y moda para tu estilo de vida activo.",
+                price: "$580.000 COP",
+                oldprice: "$699.000 COP", 
+                image: "./zapatos/zapato15.jpg", 
+                link: "https://fraksmasport.co/collections/calzado/products/zapato-cn-dio-cn01?variant=49225677308192"
+            },
+            {
+                name: "ZAPATO CN BURBER", 
+                description: "Elegancia atemporal para cualquier ocasión.",
+                price: "$580.000 COP",
+                oldprice: "$699.000 COP", 
+                image: "./zapatos/zapato16.jpg", 
+                link: "https://fraksmasport.co/collections/calzado/products/zapato-cn-burber-cn07?variant=49225674424608"
+            },
         ];
 
         // Función para cargar los productos en la cuadrícula
@@ -723,6 +815,7 @@
                         <h3>${product.name}</h3>
                         <p>${product.description}</p>
                         <span class="product-price">${product.price}</span>
+                        <span class="product-oldprice">${product.oldprice}</span>
                     </div>
                     <a href=${product.link || 'https://fraksmasport.co/'} class="add-to-cart">Añadir al Carrito</a>
                 `;
